@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define endl "\n"
 #define fast_io ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
-#define ll long long
+#define ll unsigned long long
 
 using namespace std;
 
@@ -31,6 +31,9 @@ int main(){
                 else{
                     v[i] = -1;
                 }
+            }
+            else if(i == 0){
+                result++;
             }
             else{
                 if(v[i-1] == -1){

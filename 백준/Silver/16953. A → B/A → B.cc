@@ -6,7 +6,6 @@ using namespace std;
 
 using ll = long long;
 
-unordered_map<ll, bool> visited;
 ll a, b, r=0;
 
 int bfs(ll n);
@@ -23,7 +22,6 @@ int main(){
 int bfs(ll n){
     queue<pair<ll, ll>> q;
     q.push(make_pair(n, 1));
-    visited[n] = true;
 
     while(!q.empty()){
         ll x = q.front().first;
@@ -35,14 +33,12 @@ int bfs(ll n){
         }
 
         //cout << x << " ";
-        if(!visited[x * 10 + 1] && x * 10 + 1 <= b * 10 + 1){
+        if(x * 10 + 1 <= b * 10 + 1){
             q.push(make_pair(x * 10 + 1, y+1));
-            visited[x * 10 + 1] = true;
         }
         
-        if(x * 2 <= b * 2 && !visited[x * 2]){
+        if(x * 2 <= b * 2){
             q.push(make_pair(x*2, y+1));
-            visited[x*2] = true;
         }
     }
 

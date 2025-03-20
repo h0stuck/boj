@@ -25,7 +25,7 @@ int main(){
         }
     }
     
-    cout << result << endl;;
+    cout << result << endl;
 
     return 0;
 

@@ -11,12 +11,6 @@ int main(){
 
     int n, result = 0;
     cin >> n;
-    if(n == 1){
-        int a;
-        cin >> a;
-        cout << a << endl;
-        return 0;
-    }
 
     vector<int> v(150000, 0);
     vector<int> r(150000, 0);
@@ -34,6 +28,7 @@ int main(){
             }
             else{
                 r[0] = a;
+                result = a;
             }
         }
     }
